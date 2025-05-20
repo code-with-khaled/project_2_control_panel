@@ -1,5 +1,6 @@
 import 'package:control_panel/constants/custom_color.dart';
 import 'package:control_panel/widgets/label_text.dart';
+import 'package:control_panel/widgets/tables/test_table.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,7 @@ class NewCourse extends StatelessWidget {
     final fieldWidth = 360.0;
 
     return Padding(
-      padding: const EdgeInsets.only(right: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -42,6 +43,7 @@ class NewCourse extends StatelessWidget {
           SizedBox(height: 10),
 
           Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,12 +102,18 @@ class NewCourse extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(width: fieldWidth - 120),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(content: TestTable()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: CustomColor.lime,
                     shape: RoundedRectangleBorder(

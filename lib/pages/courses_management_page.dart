@@ -1,6 +1,6 @@
-import 'package:control_panel/widgets/courses_table.dart';
 import 'package:control_panel/widgets/new_course.dart';
 import 'package:control_panel/widgets/side_bar.dart';
+import 'package:control_panel/widgets/tables/test_table.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,32 +28,57 @@ class CoursesManagementPage extends StatelessWidget {
             // Rest Part
             Expanded(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Top Nav Bar
                   SizedBox(
                     height: 70,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Greetings
-                        Text(
-                          "Hello, Admin",
-                          style: GoogleFonts.lilyScriptOne(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 20,
+                              ),
+                              child: Icon(Icons.library_books),
+                            ),
+                            Text(
+                              "Manage - All - Courses",
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w700,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ],
                         ),
+                        Row(
+                          children: [
+                            // Greetings
+                            Text(
+                              "Hello, Admin",
+                              style: GoogleFonts.lilyScriptOne(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
 
-                        SizedBox(width: 10),
+                            SizedBox(width: 10),
 
-                        // Admin Avatar
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.grey,
-                          ),
+                            // Admin Avatar
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 20,
+                              ),
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundColor: Colors.grey,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -62,48 +87,60 @@ class CoursesManagementPage extends StatelessWidget {
                   Divider(),
 
                   // Full Size Layout (Horizontal)
-                  screenWidth >= 1410
-                      ? Padding(
-                        padding: const EdgeInsets.only(left: 40, top: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
+                  screenWidth >= 1430
+                      ? Expanded(
+                        child: SingleChildScrollView(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 40, top: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 20,
-                                      ),
-                                      child: Text(
-                                        "Course Managemant",
-                                        style: GoogleFonts.inter(
-                                          fontSize: 32,
-                                          fontWeight: FontWeight.bold,
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                            vertical: 20,
+                                          ),
+                                          child: Text(
+                                            "Course Managemant",
+                                            style: GoogleFonts.inter(
+                                              fontSize: 32,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
                                         ),
-                                      ),
+                                        TestTable(),
+                                      ],
                                     ),
-                                    CoursesTable(),
                                   ],
+                                ),
+                                SizedBox(width: 20),
+
+                                // New Course Addition
+                                Container(
+                                  color: Colors.white,
+                                  child: NewCourse(),
                                 ),
                               ],
                             ),
-                            SizedBox(width: 40),
-
-                            // New Course Addition
-                            NewCourse(),
-                          ],
+                          ),
                         ),
                       )
                       // Smaller Size Layout (Vertical)
                       : Expanded(
                         child: SingleChildScrollView(
                           child: Padding(
-                            padding: const EdgeInsets.only(left: 40, top: 10),
+                            padding: const EdgeInsets.only(
+                              left: 40,
+                              top: 10,
+                              bottom: 10,
+                            ),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,14 +163,17 @@ class CoursesManagementPage extends StatelessWidget {
                                     ),
 
                                     // Courses Main Table
-                                    CoursesTable(),
+                                    TestTable(),
                                   ],
                                 ),
 
-                                SizedBox(height: 10),
+                                SizedBox(height: 20),
 
                                 // New Course Addition
-                                NewCourse(),
+                                Container(
+                                  color: Colors.white,
+                                  child: NewCourse(),
+                                ),
                               ],
                             ),
                           ),

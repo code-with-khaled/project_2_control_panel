@@ -1,5 +1,5 @@
 import 'package:control_panel/constants/custom_color.dart';
-import 'package:control_panel/widgets/students_info_table.dart';
+import 'package:control_panel/widgets/tables/students_info_table.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
