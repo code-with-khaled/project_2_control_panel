@@ -1,4 +1,5 @@
-import 'package:control_panel/widgets/course_info_dialog.dart';
+import 'package:control_panel/widgets/dialogs/add_student_dialog.dart';
+import 'package:control_panel/widgets/dialogs/course_info_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:control_panel/constants/custom_color.dart';
 
@@ -21,8 +22,9 @@ class TestTableState extends State<TestTable> {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(maxWidth: 740, maxHeight: 360),
+    return SizedBox(
+      width: 740,
+      height: 360,
       child: PaginatedDataTable(
         rowsPerPage: _rowsPerPage,
         headingRowColor: WidgetStateProperty.all(
@@ -115,7 +117,12 @@ class CourseDataSource extends DataTableSource {
               ),
               IconButton(
                 icon: Icon(Icons.group_add, color: Colors.blue),
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AddStudentDialog(),
+                  );
+                },
               ),
             ],
           ),

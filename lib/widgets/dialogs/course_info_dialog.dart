@@ -74,13 +74,7 @@ class _CourseInfoDialogState extends State<CourseInfoDialog> {
           SizedBox(height: 10),
 
           // Students Info Table
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: CustomColor.tableBorder),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: StudentsInfoTable(),
-          ),
+          StudentsInfoTable(),
         ],
       ),
 

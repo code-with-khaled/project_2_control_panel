@@ -154,7 +154,7 @@ class CoursesManagementPage extends StatelessWidget {
                                         vertical: 20,
                                       ),
                                       child: Text(
-                                        "Course Managemant",
+                                        "Course Management",
                                         style: GoogleFonts.inter(
                                           fontSize: 32,
                                           fontWeight: FontWeight.bold,

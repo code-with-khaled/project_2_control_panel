@@ -1,5 +1,5 @@
 import 'package:control_panel/constants/custom_color.dart';
-import 'package:control_panel/widgets/course_info_dialog.dart';
+import 'package:control_panel/widgets/dialogs/course_info_dialog.dart';
 import 'package:flutter/material.dart';
 
 class CoursesTable extends StatelessWidget {
