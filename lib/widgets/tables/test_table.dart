@@ -24,7 +24,6 @@ class TestTableState extends State<TestTable> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 740,
-      height: 360,
       child: PaginatedDataTable(
         rowsPerPage: _rowsPerPage,
         headingRowColor: WidgetStateProperty.all(

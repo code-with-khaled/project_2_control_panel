@@ -1,9 +1,9 @@
 import 'package:control_panel/constants/custom_color.dart';
-import 'package:control_panel/widgets/custom_list_tile.dart';
+import 'package:control_panel/widgets/custom_widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 
-class SideBar extends StatelessWidget {
-  const SideBar({super.key});
+class SideNavbar extends StatelessWidget {
+  const SideNavbar({super.key});
 
   @override
   Widget build(BuildContext context) {

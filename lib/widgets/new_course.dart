@@ -1,5 +1,4 @@
 import 'package:control_panel/constants/custom_color.dart';
-import 'package:control_panel/widgets/label_text.dart';
 import 'package:control_panel/widgets/tables/test_table.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -130,6 +129,20 @@ class NewCourse extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class LabelText extends StatelessWidget {
+  const LabelText({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Text(text, style: TextStyle(fontWeight: FontWeight.w600)),
     );
   }
 }
