@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:control_panel/pages/courses_management_page.dart';
 import 'package:control_panel/pages/students_management_page.dart';
 import 'package:control_panel/widgets/navbars/navbar_desktop.dart';
@@ -26,7 +28,6 @@ class MainPage extends StatelessWidget {
             // Rest Part
             Expanded(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Top Nav Bar
                   NavbarDesktop(),
@@ -34,7 +35,7 @@ class MainPage extends StatelessWidget {
                   Divider(),
 
                   CoursesManagementPage(),
-                  StudentsManagementPage(),
+                  // StudentsManagementPage(),
                 ],
               ),
             ),

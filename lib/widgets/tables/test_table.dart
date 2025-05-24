@@ -1,5 +1,6 @@
 import 'package:control_panel/widgets/dialogs/add_student_dialog.dart';
 import 'package:control_panel/widgets/dialogs/course_info_dialog.dart';
+import 'package:control_panel/widgets/dialogs/edit_course_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:control_panel/constants/custom_color.dart';
 
@@ -104,7 +105,12 @@ class CourseDataSource extends DataTableSource {
               ),
               IconButton(
                 icon: Icon(Icons.edit, color: Colors.black),
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => EditCourseDialog(),
+                  );
+                },
               ),
               IconButton(
                 icon: Icon(Icons.delete, color: Colors.red),
