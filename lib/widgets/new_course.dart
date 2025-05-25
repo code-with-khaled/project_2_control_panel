@@ -144,8 +144,8 @@ class LabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
-      child: Text(text, style: TextStyle(fontWeight: FontWeight.w600)),
+      padding: const EdgeInsets.only(left: 2, bottom: 4),
+      child: Text(text, style: TextStyle(fontWeight: FontWeight.bold)),
     );
   }
 }

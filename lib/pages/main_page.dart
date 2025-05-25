@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 
+import 'package:control_panel/pages/course_info_page.dart';
 import 'package:control_panel/pages/courses_management_page.dart';
 import 'package:control_panel/pages/students_management_page.dart';
 import 'package:control_panel/widgets/navbars/navbar_desktop.dart';
@@ -34,8 +35,9 @@ class MainPage extends StatelessWidget {
 
                   Divider(),
 
-                  CoursesManagementPage(),
+                  // CoursesManagementPage(),
                   // StudentsManagementPage(),
+                  CourseInfoPage(),
                 ],
               ),
             ),
