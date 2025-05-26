@@ -24,7 +24,7 @@ class MainPage extends StatelessWidget {
         child: Row(
           children: [
             // Side Nav Bar
-            SideNavbar(),
+            // SideNavbar(),
 
             // Rest Part
             Expanded(
@@ -33,11 +33,9 @@ class MainPage extends StatelessWidget {
                   // Top Nav Bar
                   NavbarDesktop(),
 
-                  Divider(),
-
                   // CoursesManagementPage(),
-                  // StudentsManagementPage(),
-                  CourseInfoPage(),
+                  StudentsManagementPage(),
+                  // CourseInfoPage(),
                 ],
               ),
             ),

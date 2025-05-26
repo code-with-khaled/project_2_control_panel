@@ -1,4 +1,4 @@
-import 'package:control_panel/payment_and_withrawal_table.dart';
+import 'package:control_panel/widgets/tables/payment_and_withrawal_table.dart';
 import 'package:control_panel/widgets/custom_widgets/evaluation_bar.dart';
 import 'package:control_panel/widgets/custom_widgets/rating_stars.dart';
 import 'package:control_panel/widgets/tables/exam_detail_table.dart';

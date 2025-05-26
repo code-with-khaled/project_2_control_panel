@@ -1,4 +1,4 @@
-import 'package:control_panel/widgets/dialogs/add_student_dialog.dart';
+import 'package:control_panel/widgets/dialogs/add_student_to_course_dialog.dart';
 import 'package:control_panel/widgets/dialogs/course_info_dialog.dart';
 import 'package:control_panel/widgets/dialogs/edit_course_dialog.dart';
 import 'package:flutter/material.dart';
@@ -125,7 +125,7 @@ class CourseDataSource extends DataTableSource {
                 onPressed: () {
                   showDialog(
                     context: context,
-                    builder: (context) => AddStudentDialog(),
+                    builder: (context) => AddStudentToCourseDialog(),
                   );
                 },
               ),

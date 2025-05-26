@@ -2,14 +2,15 @@ import 'package:control_panel/constants/custom_color.dart';
 import 'package:control_panel/widgets/tables/add_student_table.dart';
 import 'package:flutter/material.dart';
 
-class AddStudentDialog extends StatefulWidget {
-  const AddStudentDialog({super.key});
+class AddStudentToCourseDialog extends StatefulWidget {
+  const AddStudentToCourseDialog({super.key});
 
   @override
-  State<AddStudentDialog> createState() => _AddStudentDialogState();
+  State<AddStudentToCourseDialog> createState() =>
+      _AddStudentToCourseDialogState();
 }
 
-class _AddStudentDialogState extends State<AddStudentDialog> {
+class _AddStudentToCourseDialogState extends State<AddStudentToCourseDialog> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

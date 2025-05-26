@@ -19,7 +19,7 @@ class CoursesManagementPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 40),
+                padding: const EdgeInsets.only(left: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -27,9 +27,9 @@ class CoursesManagementPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Text(
                         "Course Managemant",
-                        style: GoogleFonts.inter(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
+                        style: TextStyle(
+                          fontSize: 42,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                     ),
