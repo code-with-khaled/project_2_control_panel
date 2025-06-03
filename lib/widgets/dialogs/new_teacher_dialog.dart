@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NewStudentDialog extends StatelessWidget {
-  const NewStudentDialog({super.key});
+class NewTeacherDialog extends StatelessWidget {
+  const NewTeacherDialog({super.key});
 
   @override
   Widget build(BuildContext context) {

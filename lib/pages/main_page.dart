@@ -3,12 +3,32 @@
 import 'package:control_panel/pages/course_info_page.dart';
 import 'package:control_panel/pages/courses_management_page.dart';
 import 'package:control_panel/pages/students_management_page.dart';
+import 'package:control_panel/pages/teachers_management_page.dart';
 import 'package:control_panel/widgets/navbars/navbar_desktop.dart';
 import 'package:control_panel/widgets/navbars/side_navbar.dart';
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({super.key});
+
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  int selectedIndex = 0;
+
+  final List<Widget> pages = [
+    CoursesManagementPage(),
+    StudentsManagementPage(),
+    TeachersManagementPage(),
+  ];
+
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +44,7 @@ class MainPage extends StatelessWidget {
         child: Row(
           children: [
             // Side Nav Bar
-            // SideNavbar(),
+            SideNavbar(onItemTapped: onItemTapped),
 
             // Rest Part
             Expanded(
@@ -33,8 +53,10 @@ class MainPage extends StatelessWidget {
                   // Top Nav Bar
                   NavbarDesktop(),
 
+                  pages[selectedIndex],
+
                   // CoursesManagementPage(),
-                  StudentsManagementPage(),
+                  // StudentsManagementPage(),
                   // CourseInfoPage(),
                 ],
               ),

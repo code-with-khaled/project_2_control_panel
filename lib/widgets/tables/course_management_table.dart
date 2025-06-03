@@ -4,14 +4,14 @@ import 'package:control_panel/widgets/dialogs/edit_course_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:control_panel/constants/custom_color.dart';
 
-class TestTable extends StatefulWidget {
-  const TestTable({super.key});
+class CourseManagementTable extends StatefulWidget {
+  const CourseManagementTable({super.key});
 
   @override
-  TestTableState createState() => TestTableState();
+  CourseManagementTableState createState() => CourseManagementTableState();
 }
 
-class TestTableState extends State<TestTable> {
+class CourseManagementTableState extends State<CourseManagementTable> {
   late CourseDataSource _dataSource;
   final int _rowsPerPage = 5;
 

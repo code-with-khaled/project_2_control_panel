@@ -1,4 +1,6 @@
+import 'package:control_panel/pages/courses_management_page.dart';
 import 'package:control_panel/pages/main_page.dart';
+import 'package:control_panel/pages/students_management_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +13,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Control Panel', home: const MainPage());
+    return MaterialApp(
+      routes: {
+        '/courses': (context) => CoursesManagementPage(),
+        '/students': (context) => StudentsManagementPage(),
+      },
+      title: 'Control Panel',
+      home: const MainPage(),
+    );
   }
 }

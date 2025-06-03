@@ -41,6 +41,7 @@ class _CourseInfoPageState extends State<CourseInfoPage> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     List<Map<String, dynamic>> students = [
       {"id": 1, "name": "Alice", "status": "Present"},
       {"id": 2, "name": "Bob", "status": "Absent"},
@@ -48,6 +49,7 @@ class _CourseInfoPageState extends State<CourseInfoPage> {
       {"id": 4, "name": "David", "status": "Present"},
     ];
 
+    // ignore: unused_local_variable
     List<Map<String, dynamic>> courseDays = [
       {"date": "2025-05-01", "time": "10:00 AM"},
       {"date": "2025-05-02", "time": "2:00 PM"},

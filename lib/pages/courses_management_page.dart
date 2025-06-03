@@ -1,6 +1,6 @@
 import 'package:control_panel/constants/custom_color.dart';
 import 'package:control_panel/widgets/new_course.dart';
-import 'package:control_panel/widgets/tables/test_table.dart';
+import 'package:control_panel/widgets/tables/course_management_table.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,16 +24,16 @@ class CoursesManagementPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      padding: const EdgeInsets.only(left: 5, bottom: 30),
                       child: Text(
-                        "Course Managemant",
+                        "Courses",
                         style: TextStyle(
-                          fontSize: 42,
+                          fontSize: 32,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
                     ),
-                    TestTable(),
+                    CourseManagementTable(),
                   ],
                 ),
               ),
@@ -77,7 +77,7 @@ class CoursesManagementPage extends StatelessWidget {
                       ),
 
                       // Courses Main Table
-                      TestTable(),
+                      CourseManagementTable(),
                     ],
                   ),
 
